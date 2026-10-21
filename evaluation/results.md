@@ -93,5 +93,5 @@ Not run. No API key. Mock results do not validate real LLM behavior.
 
 ## Deployment verification
 
-Not run. No public URL. Local Uvicorn is not a deployed endpoint.
+Verified against https://ai-sales-copilot-zkpu.onrender.com (`GET /health` and `POST /analyze`). Mock provider. Local Uvicorn is not this endpoint.
 

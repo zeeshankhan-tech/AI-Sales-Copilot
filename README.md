@@ -198,21 +198,27 @@ python evaluation/run_eval.py
 - Pytest: **48 passed** (API, inventory, schemas, analysis, safety, including the five required scenarios). Scope is **mock + application rules**, not a live LLM.
 - `evaluation/run_eval.py` writes `evaluation/results.md` from `evaluation/cases.json`: **8/8** on the **mock** provider. That does **not** establish real-provider reliability.
 - Live LLM smoke tests: **not run** (no key).
-- Deployment verification: **not done.** See **Deployment status** below.
+- Public deploy: **verified** against [https://ai-sales-copilot-zkpu.onrender.com](https://ai-sales-copilot-zkpu.onrender.com) (`GET /health` and `POST /analyze`). See **Deployment status** below.
 
-## Deployment status (flagged)
+## Deployment status
 
-**No public demo URL.** Deployment is **blocked from this environment**, not from missing product code.
+**Public demo (no login, no API keys):** [https://ai-sales-copilot-zkpu.onrender.com](https://ai-sales-copilot-zkpu.onrender.com)
 
-Blockers:
+Verified on this host (not localhost):
 
-1. Project is not a git repo / has no GitHub remote (Render/Railway need a push).
-2. No Render, Railway, or Fly CLI login here.
-3. Docker daemon was not running, so the image was not built.
+- `GET https://ai-sales-copilot-zkpu.onrender.com/health` → `{"status":"ok"}`
+- `POST https://ai-sales-copilot-zkpu.onrender.com/analyze` with Metro Fresh Cola 500ml stockout → 200, seven fields, `needs_human_review: true`
 
-**Local runnability** (this machine): `uvicorn app.main:app --host 127.0.0.1 --port 8000` with mock, `/health`, rate limit 10/min/IP, no API keys. That proves the process starts here. It is **not** a public demo and **not** a complete submission by itself. Evaluators still need a cloneable GitHub repo and the setup steps above. No login is required for the API once they can run it.
+```bash
+curl -s https://ai-sales-copilot-zkpu.onrender.com/health
+curl -s https://ai-sales-copilot-zkpu.onrender.com/analyze \
+  -H 'Content-Type: application/json' \
+  -d '{"field_update":"Metro Fresh reports Cola 500ml is out of stock."}'
+```
 
-After you have a public URL and `curl` against **that** host’s `/health` works, replace this section with that URL. Do not paste API keys.
+Provider is **mock**. Render free instances may sleep; the first request after idle can take ~30–60s.
+
+Local Uvicorn is still valid for development. It does not replace this URL. Docker image build remains unverified (daemon not running).
 
 ## Docker
 
