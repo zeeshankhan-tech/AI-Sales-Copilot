@@ -6,6 +6,8 @@ This is **not** an autonomous commercial decision-maker.
 
 **LLM disclosure:** the default (and only implemented) provider is a **mock**. There is no API key in this submission. Mock results **do not** validate real LLM behavior.
 
+**Demo video (3–5 min):** [AI-Sales-Copilot-Demo.mov](https://drive.google.com/file/d/1UF2dB33_x-7vPL_p7NvWvJHrQBCnhrFO/view?usp=drive_link) — set Google Drive sharing to **Anyone with the link**.
+
 ## Prerequisites
 
 - Python 3.13.5 (3.12+ compatible)
@@ -220,6 +222,10 @@ Provider is **mock**. Render free instances may sleep; the first request after i
 
 Local Uvicorn is still valid for development. It does not replace this URL. Docker image build remains unverified (daemon not running).
 
+## Demo video
+
+[3–5 minute screen recording](https://drive.google.com/file/d/1UF2dB33_x-7vPL_p7NvWvJHrQBCnhrFO/view?usp=drive_link) (Google Drive). No evaluator login should be required; use **Anyone with the link**.
+
 ## Docker
 
 ```bash
@@ -247,4 +253,4 @@ Planned timebox: **120 minutes**. Total actual elapsed time: *(record from a clo
 
 ## AI-tool usage
 
-This project was built with assistance from **Cursor** (AI coding agent). Design, tests, and evaluation commands were executed in this workspace. Mock results were not treated as live-model proof.
+The brief allows a coding assistant. **Cursor** was used in that role (lookup, boilerplate, and drafting). Architecture, schemas, safety/review rules, tests, evaluation, and the mock-vs-live limitation were specified and checked by me. Mock results were not treated as proof of a live LLM.

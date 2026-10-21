@@ -34,7 +34,7 @@ Observed results only. Do not copy planned estimates into this table.
 | Docker build/run | **Blocked.** Docker CLI present; daemon not running (`docker.sock` missing). A Dockerfile is not a successful `docker build`. |
 | Public deployment | **Verified.** https://ai-sales-copilot-zkpu.onrender.com — `GET /health` → `{"status":"ok"}`; `POST /analyze` Metro stockout → 200, seven fields, review required. Mock provider. No API keys. |
 | GitHub repository and access | Published: https://github.com/zeeshankhan-tech/AI-Sales-Copilot.git — confirm evaluator access if the repo is private. |
-| Demo recording and access | **Not recorded.** Open item. |
+| Demo recording and access | Linked: https://drive.google.com/file/d/1UF2dB33_x-7vPL_p7NvWvJHrQBCnhrFO/view?usp=drive_link — confirm Drive is **Anyone with the link** (no Google sign-in). |
 
 ## Open submission items
 
@@ -44,7 +44,7 @@ These are unfinished. Local run does not close them.
 |---|---|---|
 | GitHub repository | Published | https://github.com/zeeshankhan-tech/AI-Sales-Copilot.git — confirm evaluator access if private. |
 | Public demo URL | Verified | https://ai-sales-copilot-zkpu.onrender.com — live `/health` and `/analyze` checked. |
-| 3–5 min demo video | Open | Record against the public URL; confirm playback and sharing. |
+| 3–5 min demo video | Linked | https://drive.google.com/file/d/1UF2dB33_x-7vPL_p7NvWvJHrQBCnhrFO/view?usp=drive_link — confirm **Anyone with the link**. |
 | Measured elapsed time | Open | Fill “Total actual elapsed time” from a clock, not from the plan table. |
 
 ## REG-1 evidence
