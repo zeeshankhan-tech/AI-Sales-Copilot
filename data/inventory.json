@@ -1,0 +1,20 @@
+[
+  {
+    "id": "inv_indiranagar_cola_500ml",
+    "store": "Indiranagar Mart",
+    "product": "Cola 500ml",
+    "units": 0
+  },
+  {
+    "id": "inv_metro_fresh_cola_500ml",
+    "store": "Metro Fresh",
+    "product": "Cola 500ml",
+    "units": 48
+  },
+  {
+    "id": "inv_city_corner_juice_1l",
+    "store": "City Corner",
+    "product": "Juice 1L",
+    "units": 12
+  }
+]
